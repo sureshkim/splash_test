@@ -1,24 +1,5 @@
 {
   "name": "Your App Name",
   "description": "Your app description",
-  "image": "heroku/python",
-  "addons": [],
-  "scripts": {
-    "postdeploy": "docker pull scrapinghub/splash"
-  },
-  "formation": {
-    "web": {
-      "quantity": 1,
-      "size": "standard-1X"
-    }
-  },
-  "environments": {
-    "production": {
-      "scripts": {
-        "postdeploy": "docker run -p $PORT:8050 scrapinghub/splash"
-      },
-      "addons": []
-    }
-  },
   "stack": "container"
 }
